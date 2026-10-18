@@ -1,0 +1,18 @@
+
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // By default, allow public reads on all files, since our app uses public URLs.
+    // For a more secure app, you might want to restrict this further.
+    match /{allPaths=**} {
+      allow read;
+    }
+
+    // Only allow authenticated users to write (upload/delete) files.
+    // Our server-side logic using the Admin SDK is the primary guard for writes.
+    // This rule prevents unauthenticated client-side uploads.
+    match /{allPaths=**} {
+      allow write: if request.auth != null;
+    }
+  }
+}

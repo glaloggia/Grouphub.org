@@ -1,0 +1,19 @@
+
+{
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "hosting": [
+    {
+      "site": "grouphub-2305e",
+      "source": ".",
+      "backend": {
+        "id": "grouphub-backend",
+        "region": "us-central1"
+      }
+    }
+  ]
+}

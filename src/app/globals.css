@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 220 20% 98%; /* Lighter grey */
+    --foreground: 220 10% 20%; /* Dark Slate Grey */
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 10% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 10% 20%;
+
+    --primary: 349 89% 59%; /* Meetup Red: #f64060 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 90%; /* Light Grey */
+    --secondary-foreground: 220 10% 20%;
+
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 10% 40%;
+
+    --accent: 349 80% 95%; /* Light Pink/Red accent */
+    --accent-foreground: 349 89% 59%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 85%;
+    --input: 220 15% 90%;
+    --ring: 349 89% 59%;
+
+    --chart-1: 349 89% 59%;
+    --chart-2: 200 80% 55%;
+    --chart-3: 45 90% 55%;
+    --chart-4: 280 70% 60%;
+    --chart-5: 160 70% 50%;
+
+    /* Sidebar specific variables */
+    --sidebar-background: 220 10% 20%; /* Dark Slate Grey */
+    --sidebar-foreground: 0 0% 100%; /* White */
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 220 10% 20%;
+    --sidebar-accent: 349 89% 59%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 10% 30%;
+    --sidebar-ring: 349 89% 59%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 349 89% 59%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 349 89% 59%;
+
+    /* Dark Sidebar specific variables */
+    --sidebar-background: 222.2 84% 4.9%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 222.2 47.4% 11.2%;
+    --sidebar-accent: 349 89% 59%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 217.2 32.6% 17.5%;
+    --sidebar-ring: 349 89% 59%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
