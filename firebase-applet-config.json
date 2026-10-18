@@ -1,7 +1,7 @@
 {
   "projectId": "grouphub-2305e",
   "appId": "1:411982081705:web:a7d786ff48cfa5968b03b8",
-  "apiKey": "AIzaSyBfXszJxI9-mfyNsN2UWntbBQboItpFlWk",
+  "apiKey": "process.env.NEXT_PUBLIC_FIREBASE_API_KEY",
   "authDomain": "grouphub-2305e.firebaseapp.com",
   "firestoreDatabaseId": "ai-studio-61753933-2073-4285-9e91-dfc34506af1e",
   "storageBucket": "grouphub-2305e.firebasestorage.app",
